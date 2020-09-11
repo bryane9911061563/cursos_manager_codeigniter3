@@ -15,7 +15,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
  * @link      https://github.com/setdjod/myci-extension/
  * @param     ...
  * @return    ...
- *
  */
 
 class Login_controller extends CI_Controller
