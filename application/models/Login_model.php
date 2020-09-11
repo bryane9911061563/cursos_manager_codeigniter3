@@ -36,14 +36,16 @@ class Login_model extends CI_Model {
 
   public function validar_sesion($array)
   {
-    $this->db->where('correo',$array['correo']);
-    $this->db->where('contrasena',$array['contrasena']);
-    $this->db->select('*');
-    $this->db->from('personas');
-    $query = $this->db->get();
+    $correo="".$array['correo']."";
+    $contrasena="".$array['contrasena']."";
+    //$query = $this->db->query('SELECT * FROM personas WHERE correo="'.$correo.'" AND contrasena="'.$array['contrasena'].'"');
+    $this->db->where('correo',$correo);
+    $this->db->where('contrasena',$contrasena);
+    $query=$this->db->get('personas');
     if($query->num_rows()>0){
       $row=$query->row();
-      $array_userdata=array(
+      $array_userdata=array(//Datos para insertar en la sesion
+        'estado_session'=>1,
         'nombres_session'=>$row->nombres(),
         'apellidos_session'=>$row->apellidos(),
         'correo_session'=>$row->correo(),

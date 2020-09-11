@@ -109,16 +109,16 @@ class Login_controller extends CI_Controller
           'contrasena'=>$this->encrypt->encode($contrasena)
         );        
        
-        if($this->Login_model->validar_sesion($userdata_array)){
+        if($this->Login_model->validar_sesion($userdata_array)===true){
           redirect(base_url());
-        }else{
+        }else{//Caso error por accessos invalidos
           $array=array(
             'error'=>3,
-            'mensaje'=>$this->session->userdata('nombres_session'),            
+            'mensaje'=>'Correo o contraseña incorrectos, intentalo de nuevo',            
           );
           echo json_encode($array);
         }
-      }else
+      }else//Caso error por campos vacios
       {
         $array=array(
           'error'=>2,

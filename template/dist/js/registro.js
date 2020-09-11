@@ -13,6 +13,7 @@ $("#form-registro").submit(function(e){
                 (catch_resp.contrasena1_error!='') ? $('#error-contrasena1').html(catch_resp.contrasena1_error):$('#error-contrasena1').html('');
                 (catch_resp.contrasena2_error!='') ? $('#error-contrasena2').html(catch_resp.contrasena2_error):$('#error-contrasena2').html('');
             }else{
+                
                 $('#error-nombres').html('');
                 $('#error-apellidos').html('');
                 $('#error-correo').html('');
@@ -28,10 +29,20 @@ $("#form-registro").submit(function(e){
                     if (result.isConfirmed) {
                         location.href="login";
                     }
-                  })
+                });
+                $("#form-registro")[0].reset();
             }
         },error:function(){
-            alert('error');
+            Swal.fire({
+                title: 'Algo salió mal',
+                text: "Intentalo nuevamente",
+                icon: 'error',
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'Aceptar'
+              }).then((result) => {
+                if (result.isConfirmed) {
+                }
+            });
         }
     });
   });

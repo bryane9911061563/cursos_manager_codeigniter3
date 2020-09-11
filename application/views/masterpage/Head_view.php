@@ -6,10 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Static Navigation - SB Admin</title>
+        <title>FastManager - Cursos</title>
         <!--Sweet Alert 2 SCRIPT-->
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-        <!--////////////////////////////////////////////////////////-->
+        <!------------------------------------------------------------------->
         <link href="<?=base_url();?>template/dist/css/styles.css" rel="stylesheet" />
         <link href="<?=base_url();?>template/dist/css/bootstrap-4.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
