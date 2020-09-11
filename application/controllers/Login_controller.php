@@ -6,12 +6,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
  *
  * Controller Login_controller
  *
- * This controller for ...
+ * Este controlador maneja las vistas y funciones de login principal
  *
  * @package   CodeIgniter
  * @category  Controller CI
- * @author    Setiawan Jodi <jodisetiawan@fisip-untirta.ac.id>
- * @author    Raul Guerrero <r.g.c@me.com>
+ * @author    Bryan Edilberto Pool  Mercado <bryanedilberto@outlook.com>
  * @link      https://github.com/setdjod/myci-extension/
  * @param     ...
  * @return    ...
