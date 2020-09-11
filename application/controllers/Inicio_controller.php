@@ -15,9 +15,12 @@ class Inicio_controller extends CI_Controller
     $this->load->view('masterpage/Head_view');
     $this->load->view('masterpage/Navbar_view');
     $this->load->view('masterpage/Sidebar_view');
-    $this->load->view('publico/Index_view');
+//    $this->load->view('publico/Index_view');
+    $this->load->view('administrador/Index_view');
     $this->load->view('masterpage/Footer_view');
   }
+
+  
 
 }
 

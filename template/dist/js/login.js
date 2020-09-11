@@ -1,0 +1,26 @@
+$("#form-login").submit(function(e){
+    e.preventDefault();
+    $.ajax({
+        url:'login/iniciar_sesion',
+        type:'POST',
+        data:$(this).serialize(),
+        dataType:'json',
+        success:function(catch_resp){
+            if(catch_resp.error==2){
+                (catch_resp.correo_error!='')?$('#error-correo').html(catch_resp.correo_error):$('#error-correo').html('');
+                (catch_resp.contrasena_error!='')?$('#error-contrasena').html(catch_resp.contrasena_error):$('#error-contrasena').html('');
+            }
+            if(catch_resp.error==3){
+                $('#error-correo').html('');
+                $('#error-contrasena').html(catch_resp.mensaje);
+            }else{
+                $('#error-correo').html('');
+                $('#error-contrasena').html('');
+            }
+        },
+        error:function(){
+            $('#error-contrasena').html('UPS');
+
+        }
+    });
+});
